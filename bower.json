@@ -1,0 +1,14 @@
+{
+  "name": "thecode.me",
+  "description": "A Vue.js project",
+  "main": "",
+  "authors": [
+    "JianyingLi <lijy91@foxmail.com>"
+  ],
+  "license": "Apache License 2.0",
+  "homepage": "https://github.com/lijy91/thecode.me",
+  "dependencies": {
+    "semantic": "semantic-ui#^2.2.7",
+    "jquery": "^3.1.1"
+  }
+}
