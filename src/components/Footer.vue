@@ -1,12 +1,14 @@
 <template>
-  <div class="ui inverted vertical footer segment">
-    <div class="ui copyright container">
-      <div class="ui two column centered doubling grid">
-        <div class="column">
-          &copy; 2017 <a href="https://thecode.me" target="_blank">THECODE.ME</a> 保留所有权利
-        </div>
-        <div class="right aligned column">
-          <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备15047595号-3</a>
+  <div>
+    <div class="ui inverted vertical footer segment">
+      <div class="ui copyright container">
+        <div class="ui grid">
+          <div class="left aligned ten wide column">
+            &copy; 2017 <a href="https://thecode.me" target="_blank">THECODE.ME</a> 保留所有权利
+          </div>
+          <div class="computer only right aligned six wide column">
+            <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备15047595号-2</a>
+          </div>
         </div>
       </div>
     </div>

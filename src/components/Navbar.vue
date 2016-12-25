@@ -2,8 +2,8 @@
   <div class="ui navbar borderless fixed menu">
     <div class="ui container">
       <div class="header item">
-        <router-link to="/" style="height: 32px;">
-          <img class="logo" src="../assets/ic_logo_dark.png">
+        <router-link to="/" style="height: 50px;">
+          <img class="logo" src="../assets/logo.png">
         </router-link>
       </div>
       <div class="right menu">
@@ -31,5 +31,5 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>

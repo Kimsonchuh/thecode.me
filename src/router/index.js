@@ -16,6 +16,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: 'history',
+  linkActiveClass: 'active',
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
@@ -24,15 +25,17 @@ const router = new VueRouter({
       children: [
         {
           path: '/',
+          name: 'home_index',
           component: HomeIndexView,
         },
         {
           path: 'topics/:slug',
+          name: 'topic_detail',
           component: TopicDetailView,
         },
         {
-          name: 'article_detail',
           path: 'articles/:slug',
+          name: 'article_detail',
           component: ArticleDetailView,
         },
       ],

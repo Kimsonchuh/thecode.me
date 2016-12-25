@@ -84,15 +84,11 @@ export default {
   padding-bottom: 64px;
   h1.ui.header {
     font-size: 48px;
-    font-weight: 100;
     line-height: 60px;
-    font-style: normal;
   }
   h2.ui.header {
     font-size: 36px;
-    font-weight: 100;
     line-height: 50px;
-    font-style: normal;
   }
 }
 // 1、大屏幕
