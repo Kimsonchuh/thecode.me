@@ -5,6 +5,7 @@
 <script>
 import 'nprogress/nprogress.css';
 import 'toastr/build/toastr.css';
+import 'github-markdown-css/github-markdown.css';
 
 export default {
 };
@@ -16,8 +17,9 @@ export default {
     width: 1000px;
   }
   .main.container {
-    padding-top: 100px;
-    padding-bottom: 2em;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .navbar.menu {
     height: 100px;
