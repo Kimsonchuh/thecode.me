@@ -11,7 +11,6 @@ import topics from './modules/topics';
 import articles from './modules/articles';
 import tags from './modules/tags';
 
-
 Vue.use(Vuex);
 
 const debug = process.env.NODE_ENV !== 'production';

@@ -1,14 +1,15 @@
 <template>
   <div>
     <!--
-    // 1、大屏幕
+    // 1、报头
     -->
-    <div class="ui jumbotron inverted vertical center aligned segment">
+    <div
+      class="ui masthead inverted vertical center aligned segment">
       <div class="ui text container">
         <h1 class="ui inverted header">
-          N/A
+          {{article_masthead.title}}
         </h1>
-        <button class="ui inverted button">N/A</button>
+        <button class="ui inverted button">立即阅读</button>
       </div>
     </div>
     <!--
@@ -17,7 +18,7 @@
     <div class="ui articles basic vertical center aligned segment">
       <div class="ui text container">
         <h2 class="ui header">
-          N/A
+          最新文章
         </h2>
       </div>
     </div>
@@ -27,7 +28,7 @@
     <div class="ui motto basic vertical center aligned segment">
       <div class="ui text container">
         <h2 class="ui header">
-          N/A
+          格言
         </h2>
       </div>
     </div>
@@ -47,17 +48,18 @@
     <div class="ui about basic vertical center aligned segment">
       <div class="ui text container">
         <h2 class="ui header">
-          关于
+          关于我
         </h2>
       </div>
     </div>
+    <div class="ui divider"></div>
     <!--
     // 6、友情链接
     -->
     <div class="ui links basic vertical center aligned segment">
       <div class="ui text container">
         <h2 class="ui header">
-          N/A
+          友情链接
         </h2>
       </div>
     </div>
@@ -65,13 +67,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 
 export default {
-  data() {
-    return {
-    };
-  },
+  computed: mapState({
+    article_masthead: state => state.home.article_masthead,
+  }),
   mounted() {
+    this.$store.dispatch('homeGetData');
   },
 };
 </script>
@@ -91,8 +94,8 @@ export default {
     line-height: 50px;
   }
 }
-// 1、大屏幕
-.jumbotron.segment {
+// 1、报头
+.masthead.segment {
   min-height: 320px;
   margin-top: 100px;
   padding-top: 80px;
