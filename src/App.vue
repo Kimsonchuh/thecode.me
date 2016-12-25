@@ -12,6 +12,9 @@ export default {
 
 <style lang="scss">
 #wrapper {
+  .ui.container {
+    width: 1000px;
+  }
   .main.container {
     padding-top: 100px;
     padding-bottom: 2em;
