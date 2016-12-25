@@ -9,7 +9,10 @@
         <h1 class="ui inverted header">
           {{article_masthead.title}}
         </h1>
-        <button class="ui inverted button">立即阅读</button>
+        <router-link
+          :to="{ name: 'article_detail', params: { slug: article_masthead.id }}"
+          class="ui inverted button">立即阅读
+        </router-link>
       </div>
     </div>
     <!--

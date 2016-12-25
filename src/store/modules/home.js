@@ -21,12 +21,6 @@ export default {
     HOME_SIDE_TOPIC_GET_LISTS_SUCCESS: (state, { data }) => {
       Vue.set(state, 'side_topics', data);
     },
-    HOME_SIDE_TAG_GET_LISTS_SUCCESS: (state, { data }) => {
-      Vue.set(state, 'side_tags', data);
-    },
-    HOME_SIDE_LINK_GET_LISTS_SUCCESS: (state, { data }) => {
-      Vue.set(state, 'side_links', data);
-    },
   },
   actions: {
     homeGetData({ commit }) {
@@ -34,14 +28,8 @@ export default {
       api.topic_article_get_lists('10').then((response) => {
         commit(types.HOME_MASTHEAD_GET_ENTITY_SUCCESS, response.data);
       });
-      api.topic_article_get_lists('11').then((response) => {
-        commit(types.HOME_SIDE_TOPIC_GET_LISTS_SUCCESS, response.data);
-      });
-      api.tag_get_lists().then((response) => {
-        commit(types.HOME_SIDE_TAG_GET_LISTS_SUCCESS, response.data);
-      });
       api.topic_article_get_lists('side-links').then((response) => {
-        commit(types.HOME_SIDE_LINK_GET_LISTS_SUCCESS, response.data);
+        commit(types.HOME_SIDE_TOPIC_GET_LISTS_SUCCESS, response.data);
       });
     },
   },

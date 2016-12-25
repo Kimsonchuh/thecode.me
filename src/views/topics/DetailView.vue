@@ -1,12 +1,17 @@
 <template>
-  <div class="ui main container">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-3">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  <div>
+    <div class="ui jumbotron inverted vertical center aligned segment">
+      <div v-if="entity">
+        <h1 class="ui inverted header">
+          <img class="ui tiny circular image" :src="entity.image_url">
+        </h1>
+        <h1 class="ui inverted header">
+          {{entity.name}}
+        </h1>
+        <div class="sub header">{{ entity.description }}</div>
       </div>
     </div>
-    <div class="container">
+    <div class="ui main container">
       topic
       {{ entity }}
     </div>

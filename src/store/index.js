@@ -5,11 +5,8 @@ import * as getters from './getters';
 
 import home from './modules/home';
 import account from './modules/account';
-import users from './modules/users';
-import categories from './modules/categories';
 import topics from './modules/topics';
 import articles from './modules/articles';
-import tags from './modules/tags';
 
 Vue.use(Vuex);
 
@@ -21,11 +18,8 @@ export default new Vuex.Store({
   modules: {
     home,
     account,
-    users,
-    categories,
     topics,
     articles,
-    tags,
   },
   strict: debug,
 });

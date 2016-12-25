@@ -1,7 +1,8 @@
 <template>
   <div class="ui main container">
-    article
-    {{ entity }}
+    <div class="ui text container" v-if="entity">
+      <div v-html="entity.content"></div>
+    </div>
   </div>
 </template>
 

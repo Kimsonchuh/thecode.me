@@ -77,30 +77,5 @@ export default {
         commit(types.ACCOUNT_LOGOUT_SUCCESS);
       });
     },
-    accountGetProfile({ commit }) {
-      api.account_get_profile().then((response) => {
-        commit(types.REQUEST_SUCCESS, response.data);
-      });
-    },
-    accountUpdateProfile({ commit }, params) {
-      api.account_update_profile(params).then((response) => {
-        commit(types.REQUEST_SUCCESS, response.data);
-      });
-    },
-    accountUpdateConfigs({ commit }, params) {
-      api.account_update_configs(params).then((response) => {
-        commit(types.REQUEST_SUCCESS, response.data);
-      });
-    },
-    accountPasswordReset({ commit }, params) {
-      api.account_password_reset(params).then((response) => {
-        commit(types.REQUEST_SUCCESS, response.data);
-      });
-    },
-    accountPasswordModify({ commit }, params) {
-      api.account_password_modify(params).then((response) => {
-        commit(types.REQUEST_SUCCESS, response.data);
-      });
-    },
   },
 };

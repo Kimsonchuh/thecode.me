@@ -19,29 +19,11 @@ Vue.http.interceptors.push((request, next) => {
 
 export default {
   // ACCOUNT
-  account_register(params) {
-    return Vue.http.post('account/register', params);
-  },
   account_login(params) {
     return Vue.http.post('account/login', params);
   },
   account_logout() {
     return Vue.http.post('account/logout');
-  },
-  account_get_profile() {
-    return Vue.http.get('account/profile');
-  },
-  account_update_profile(params) {
-    return Vue.http.put('account/profile', params);
-  },
-  account_update_configs(params) {
-    return Vue.http.put('account/configs', params);
-  },
-  account_password_reset(params) {
-    return Vue.http.post('account/password_modify', params);
-  },
-  account_password_modify(params) {
-    return Vue.http.post('account/password_modify', params);
   },
   // USERS
   user_get_entity(id) {
@@ -131,18 +113,5 @@ export default {
   },
   article_viewer_get_lists(id) {
     return Vue.http.get(`articles/${id}/viewers`);
-  },
-  // TAG
-  tag_get_lists() {
-    return Vue.http.get('tags');
-  },
-  tag_create_entity(params) {
-    return Vue.http.post('tags', params);
-  },
-  tag_get_entity(name) {
-    return Vue.http.get(`tags/${name}`);
-  },
-  tag_article_get_lists(name) {
-    return Vue.http.get(`tags/${name}/articles`);
   },
 };
